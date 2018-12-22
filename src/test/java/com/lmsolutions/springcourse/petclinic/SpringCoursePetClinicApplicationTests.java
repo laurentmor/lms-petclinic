@@ -1,4 +1,4 @@
-package com.lmsolutions.springcoursepetclinic;
+package com.lmsolutions.springcourse.petclinic;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
