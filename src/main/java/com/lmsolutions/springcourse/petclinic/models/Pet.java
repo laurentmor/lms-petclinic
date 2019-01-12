@@ -23,20 +23,36 @@
  *
  */
 
-package com.lmsolutions.springcourse.petclinic;
+package com.lmsolutions.springcourse.petclinic.models;
 
-import org.junit.Test;
-import org.junit.runner.RunWith;
-import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.test.context.junit4.SpringRunner;
+import java.time.LocalDate;
 
-@RunWith(SpringRunner.class)
-@SpringBootTest
-public class SpringCoursePetClinicApplicationTests {
+public class Pet  {
+    private PetType petType;
+    private Owner owner;
+    private LocalDate bithDate;
 
-    @Test
-    public void contextLoads() {
+    public Owner getOwner() {
+        return owner;
     }
 
-}
+    public void setOwner(Owner owner) {
+        this.owner = owner;
+    }
 
+    public LocalDate getBithDate() {
+        return bithDate;
+    }
+
+    public void setBithDate(LocalDate bithDate) {
+        this.bithDate = bithDate;
+    }
+
+    public PetType getPetType() {
+        return petType;
+    }
+
+    public void setPetType(PetType petType) {
+        this.petType = petType;
+    }
+}

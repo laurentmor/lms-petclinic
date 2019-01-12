@@ -23,20 +23,27 @@
  *
  */
 
-package com.lmsolutions.springcourse.petclinic;
+package com.lmsolutions.springcourse.petclinic.models;
 
-import org.junit.Test;
-import org.junit.runner.RunWith;
-import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.test.context.junit4.SpringRunner;
+public class Person  {
 
-@RunWith(SpringRunner.class)
-@SpringBootTest
-public class SpringCoursePetClinicApplicationTests {
+    private String lastName;
+    private String firstName;
 
-    @Test
-    public void contextLoads() {
+    public String getFirstName() {
+        return firstName;
     }
 
-}
+    public void setFirstName(final String firstName) {
+        this.firstName = firstName;
+    }
 
+    public String getLastName() {
+        return lastName;
+    }
+
+    public void setLastName(final String lastName) {
+        this.lastName = lastName;
+    }
+    public void c(){}
+}
