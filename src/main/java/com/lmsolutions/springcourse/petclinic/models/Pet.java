@@ -30,7 +30,7 @@ import java.time.LocalDate;
 public class Pet  {
     private PetType petType;
     private Owner owner;
-    private LocalDate bithDate;
+    private LocalDate birthDate;
 
     public Owner getOwner() {
         return owner;
@@ -40,12 +40,12 @@ public class Pet  {
         this.owner = owner;
     }
 
-    public LocalDate getBithDate() {
-        return bithDate;
+    public LocalDate getBirthDate() {
+        return birthDate;
     }
 
-    public void setBithDate(LocalDate bithDate) {
-        this.bithDate = bithDate;
+    public void setBirthDate(LocalDate birthDate) {
+        this.birthDate = birthDate;
     }
 
     public PetType getPetType() {
