@@ -67,4 +67,7 @@
     </dependencies>
 
 
+    <scm>
+        <tag>pet-clinic-web-0.03</tag>
+    </scm>
 </project>
