@@ -40,7 +40,7 @@
     <groupId>com.lmsolutions</groupId>
     <artifactId>spring-course-pet-clinic</artifactId>
 
-    <version>0.04-SNAPSHOT</version>
+    <version>0.04</version>
 
     <name>spring-course-pet-clinic</name>
     <description>Demo project for Spring Boot</description>
@@ -70,7 +70,7 @@
     </build>
     <scm>
         <developerConnection>scm:git:git@github.com:laurentmor/lms-petclinic.git</developerConnection>
-        <tag>0.02-SNAPSHOT</tag>
+        <tag>spring-course-pet-clinic-0.04</tag>
     </scm>
 
     <reporting>
