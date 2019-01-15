@@ -25,25 +25,14 @@
 
 package com.lmsolutions.springcourse.petclinic.models;
 
-public class Person  {
+import lombok.Data;
+
+@Data
+public class Person {
+
 
     private String lastName;
     private String firstName;
 
-    public String getFirstName() {
-        return firstName;
-    }
 
-    public void setFirstName(final String firstName) {
-        this.firstName = firstName;
-    }
-
-    public String getLastName() {
-        return lastName;
-    }
-
-    public void setLastName(final String lastName) {
-        this.lastName = lastName;
-    }
-    public void c(){}
 }
