@@ -28,7 +28,7 @@
     <parent>
         <artifactId>spring-course-pet-clinic</artifactId>
         <groupId>com.lmsolutions</groupId>
-        <version>0.03-SNAPSHOT</version>
+        <version>0.03</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
@@ -38,7 +38,7 @@
         <dependency>
             <groupId>com.lmsolutions</groupId>
             <artifactId>pet-clinic-data</artifactId>
-            <version>0.03-SNAPSHOT</version>
+            <version>0.03</version>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -68,6 +68,6 @@
 
 
     <scm>
-        <tag>pet-clinic-web-0.03</tag>
+        <tag>spring-course-pet-clinic-0.03</tag>
     </scm>
 </project>
