@@ -67,7 +67,4 @@
     </dependencies>
 
 
-    <scm>
-        <tag>spring-course-pet-clinic-0.03</tag>
-    </scm>
 </project>
