@@ -67,13 +67,21 @@
     </dependencies>
     <build>
         <plugins>
-            <plugin>
+            <!--<plugin>
                 <groupId>com.spotify</groupId>
                 <artifactId>dockerfile-maven-plugin</artifactId>
                 <version>1.4.9</version>
+                <dependencies>
+                    <dependency>
+                        <groupId>com.spotify</groupId>
+                        <artifactId>docker-client</artifactId>
+                        <version>8.8.4</version>
+                        <classifier>shaded</classifier>
+                    </dependency>
+                </dependencies>
                 <configuration>
                     <repository>laurentmorissette/lms-pet-clinic</repository>
-                    <tag>${project.version}</tag>
+                    <tag>${project.version}-dock</tag>
                     <buildArgs>
                         <JAR>target/${project.build.finalName}.jar</JAR>
                         <END_JAR>pet-clinic-web.jar</END_JAR>
@@ -89,7 +97,7 @@
                         </goals>
                     </execution>
                 </executions>
-            </plugin>
+            </plugin>-->
         </plugins>
     </build>
 

@@ -1,6 +1,6 @@
 FROM openjdk:8-jdk-alpine
 MAINTAINER "laurent.morissette@gmail.com"
-VOLUME /tmp
+VOLUME /tmp/apps
 EXPOSE 8080
 ARG JAR=target/pet-clinic-web-*.jar
 ARG END_JAR=pet-clinic-web.jar
