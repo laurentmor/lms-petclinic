@@ -26,9 +26,11 @@
 package com.lmsolutions.springcourse.petclinic.services;
 
 import org.springframework.data.annotation.Id;
+import org.springframework.stereotype.Service;
 
 import java.util.Set;
 
+@Service
 public interface CRUDService<EntityClass> {
     EntityClass findById(Id id);
 

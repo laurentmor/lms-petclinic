@@ -27,13 +27,9 @@ package com.lmsolutions.springcourse.petclinic.models;
 
 import lombok.Data;
 
-import java.time.LocalDate;
+import java.io.Serializable;
 
 @Data
-public class Pet extends BaseEntity {
-    private PetType petType;
-    private Owner owner;
-    private LocalDate birthDate;
-
-
+public class BaseEntity implements Serializable {
+    private Long id;
 }

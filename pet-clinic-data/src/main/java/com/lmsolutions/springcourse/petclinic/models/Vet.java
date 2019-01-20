@@ -25,5 +25,8 @@
 
 package com.lmsolutions.springcourse.petclinic.models;
 
+import lombok.Data;
+
+@Data
 public class Vet extends Person {
 }

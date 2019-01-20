@@ -25,5 +25,8 @@
 
 package com.lmsolutions.springcourse.petclinic.models;
 
-public class PetType {
+import lombok.Data;
+
+@Data
+public class PetType extends BaseEntity {
 }
