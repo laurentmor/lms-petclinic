@@ -23,9 +23,10 @@
  *
  */
 
-package com.lmsolutions.springcourse.petclinic.services;
+package com.lmsolutions.springcourse.petclinic.services.map;
 
 import com.lmsolutions.springcourse.petclinic.models.PetType;
+import com.lmsolutions.springcourse.petclinic.services.PetTypeService;
 
-public interface PetTypeService extends CRUDService<PetType, Long> {
+public class PetTypeMapService extends AbstractMapService<PetType, Long> implements PetTypeService {
 }

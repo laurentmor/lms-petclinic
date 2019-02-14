@@ -27,5 +27,5 @@ package com.lmsolutions.springcourse.petclinic.services;
 
 import com.lmsolutions.springcourse.petclinic.models.Vet;
 
-public interface VetService extends CRUDService<Vet> {
+public interface VetService extends CRUDService<Vet, Long> {
 }

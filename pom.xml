@@ -44,13 +44,62 @@
     <version>0.06-SNAPSHOT</version>
 
     <name>spring-course-pet-clinic</name>
-    <description>Demo project for Spring Boot</description>
+    <description>Parent project for spring pet-clinic course app</description>
+    <inceptionYear>2019</inceptionYear>
+    <licenses>
+        <license>
+            <name>MIT</name>
+            <comments>The MIT licensee</comments>
+            <distribution>Free</distribution>
+            <url>https://opensource.org/licenses/MIT</url>
+        </license>
+    </licenses>
     <properties>
         <java.version>1.8</java.version>
     </properties>
 
     <dependencies>
     </dependencies>
+    <developers>
+
+        <developer>
+            <id>1</id>
+            <name>Laurent Morissette</name>
+            <email>Laurent.Morissette@gmail.com</email>
+            <organization>LM Solutions</organization>
+            <roles>
+                <role>Team Lead</role>
+            </roles>
+            <timezone>${user.timezone}</timezone>
+            <properties>
+                <github.user>laurentmor</github.user>
+            </properties>
+
+        </developer>
+
+    </developers>
+    <contributors>
+        <contributor>
+            <name>Bob Wayne</name>
+        </contributor>
+    </contributors>
+    <ciManagement>
+        <notifiers>
+            <notifier>
+                <type>Mail</type>
+                <configuration>
+                    <project>${project.name}</project>
+                    <address>Laurent.Morissette@gmail.com</address>
+                </configuration>
+            </notifier>
+        </notifiers>
+        <url>https://circleci.com/gh/laurentmor/lms-petclinic/</url>
+        <system>CircleCi</system>
+    </ciManagement>
+    <issueManagement>
+        <system>Bugzilla</system>
+        <url>https://bugs.lmsolutions.com/projects/pet-clinic</url>
+    </issueManagement>
 
 
     <build>
@@ -73,8 +122,10 @@
         </plugins>
     </build>
     <scm>
+
         <developerConnection>scm:git:git@github.com:laurentmor/lms-petclinic.git</developerConnection>
         <tag>0.02-SNAPSHOT</tag>
+        <url>http://github.com/laurentmor/lms-petclinic.git</url>
     </scm>
 
     <reporting>

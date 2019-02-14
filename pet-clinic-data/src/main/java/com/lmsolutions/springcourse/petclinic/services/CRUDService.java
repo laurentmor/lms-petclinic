@@ -25,20 +25,16 @@
 
 package com.lmsolutions.springcourse.petclinic.services;
 
-import org.springframework.data.annotation.Id;
-import org.springframework.stereotype.Service;
-
 import java.util.Set;
 
-@Service
-public interface CRUDService<EntityClass> {
-    EntityClass findById(Id id);
 
-    EntityClass findById(Long id);
-
-    EntityClass findByLastName(String lastName);
-
+public interface CRUDService<EntityClass, ID> {
+    EntityClass findById(ID id);
     Set<EntityClass> findAll();
 
-    EntityClass save(EntityClass owner);
+    EntityClass save(ID id, EntityClass owner);
+
+    void delete(EntityClass object);
+
+    void deleteByID(ID id);
 }

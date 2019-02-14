@@ -23,9 +23,35 @@
  *
  */
 
-package com.lmsolutions.springcourse.petclinic.services;
+package com.lmsolutions.springcourse.petclinic.services.map;
 
-import com.lmsolutions.springcourse.petclinic.models.PetType;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Map;
+import java.util.Set;
 
-public interface PetTypeService extends CRUDService<PetType, Long> {
+public abstract class AbstractMapService<EntityClass, ID> {
+    protected Map<ID, EntityClass> map = new HashMap<>();
+
+    public Set<EntityClass> findAll() {
+        return new HashSet<>(map.values());
+    }
+
+    public EntityClass findById(final ID id) {
+        return map.get(id);
+    }
+
+    public void delete(final EntityClass object) {
+        map.entrySet().removeIf(entry -> entry.getValue().equals(object));
+    }
+
+    public EntityClass save(final ID id, final EntityClass object) {
+        return map.putIfAbsent(id, object);
+    }
+
+    public void deleteByID(final ID id) {
+        map.remove(id);
+    }
+
+
 }

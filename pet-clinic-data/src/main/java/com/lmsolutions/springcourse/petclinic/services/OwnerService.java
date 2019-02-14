@@ -28,6 +28,6 @@ package com.lmsolutions.springcourse.petclinic.services;
 
 import com.lmsolutions.springcourse.petclinic.models.Owner;
 
-public interface OwnerService extends CRUDService<Owner> {
-
+public interface OwnerService extends CRUDService<Owner, Long> {
+    Owner findByName(String name);
 }

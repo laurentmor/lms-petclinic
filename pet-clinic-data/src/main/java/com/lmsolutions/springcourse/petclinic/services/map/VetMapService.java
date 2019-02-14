@@ -23,9 +23,38 @@
  *
  */
 
-package com.lmsolutions.springcourse.petclinic.services;
+package com.lmsolutions.springcourse.petclinic.services.map;
 
-import com.lmsolutions.springcourse.petclinic.models.PetType;
+import com.lmsolutions.springcourse.petclinic.models.Vet;
+import com.lmsolutions.springcourse.petclinic.services.VetService;
 
-public interface PetTypeService extends CRUDService<PetType, Long> {
+import java.util.Set;
+
+public final class VetMapService extends AbstractMapService<Vet, Long> implements VetService {
+    @Override
+    public Vet findById(Long id) {
+        return super.findById(id);
+    }
+
+    @Override
+    public Set<Vet> findAll() {
+        return super.findAll();
+    }
+
+    @Override
+    public void deleteByID(Long id) {
+        super.deleteByID(id);
+
+    }
+
+    @Override
+    public void delete(Vet object) {
+        super.delete(object);
+
+    }
+
+    @Override
+    public Vet save(Long id, Vet vet) {
+        return super.save(id, vet);
+    }
 }
