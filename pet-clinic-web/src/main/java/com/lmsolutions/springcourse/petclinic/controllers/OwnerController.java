@@ -31,10 +31,13 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import java.util.logging.Logger;
 
 @Controller
-public class IndexController {
-    @RequestMapping({" ", "/", "/index", "/index.html"})
+public class OwnerController {
+    public OwnerController() {
+    }
+
+    @RequestMapping({"/owner"})
     public String index() {
-        Logger.getAnonymousLogger().info("in index");
-        return "index";
+        Logger.getAnonymousLogger().info("in owner Controller");
+        return "owner/index";
     }
 }
