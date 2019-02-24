@@ -27,20 +27,28 @@ package com.lmsolutions.springcourse.petclinic;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.ApplicationContext;
-import org.springframework.context.annotation.ComponentScan;
+import org.springframework.boot.web.server.WebServerFactoryCustomizer;
+import org.springframework.boot.web.servlet.server.ConfigurableServletWebServerFactory;
+import org.springframework.stereotype.Component;
 
-@ComponentScan("com.lmsolutions.springcourse.petclinic")
 @SpringBootApplication
-//@ComponentScan("com.lmsolutions.springcourse.petclinic")
 public class SpringCoursePetClinicApplication {
 
     public static void main(String[] args) {
 
-        ApplicationContext applicationContext = SpringApplication.run(SpringCoursePetClinicApplication.class, args);
+        SpringApplication.run(SpringCoursePetClinicApplication.class, args);
 
-        for (String name : applicationContext.getBeanDefinitionNames()) {
-            System.out.println(name);
+
+    }
+
+    @Component
+    public class CustomContainer implements
+            WebServerFactoryCustomizer<ConfigurableServletWebServerFactory> {
+
+        public void customize(ConfigurableServletWebServerFactory factory) {
+            Integer port = System.getenv("PORT") != null ? Integer.parseInt(System.getenv("PORT")) : 8080;
+            factory.setPort(port);
+            factory.setContextPath("");
         }
     }
 
