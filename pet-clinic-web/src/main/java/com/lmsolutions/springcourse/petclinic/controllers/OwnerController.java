@@ -23,26 +23,21 @@
  *
  */
 
-package com.lmsolutions.springcourse.petclinic;
+package com.lmsolutions.springcourse.petclinic.controllers;
 
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.ApplicationContext;
-import org.springframework.context.annotation.ComponentScan;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
 
-@ComponentScan("com.lmsolutions.springcourse.petclinic")
-@SpringBootApplication
-//@ComponentScan("com.lmsolutions.springcourse.petclinic")
-public class SpringCoursePetClinicApplication {
+import java.util.logging.Logger;
 
-    public static void main(String[] args) {
-
-        ApplicationContext applicationContext = SpringApplication.run(SpringCoursePetClinicApplication.class, args);
-
-        for (String name : applicationContext.getBeanDefinitionNames()) {
-            System.out.println(name);
-        }
+@Controller
+public class OwnerController {
+    public OwnerController() {
     }
 
+    @RequestMapping({"/owner*"})
+    public String index() {
+        Logger.getAnonymousLogger().info("in owner Controller");
+        return "owner/index";
+    }
 }
-
