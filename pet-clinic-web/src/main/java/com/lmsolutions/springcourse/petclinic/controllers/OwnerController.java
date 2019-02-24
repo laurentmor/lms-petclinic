@@ -35,7 +35,7 @@ public class OwnerController {
     public OwnerController() {
     }
 
-    @RequestMapping({"/owner"})
+    @RequestMapping({"/owner*"})
     public String index() {
         Logger.getAnonymousLogger().info("in owner Controller");
         return "owner/index";

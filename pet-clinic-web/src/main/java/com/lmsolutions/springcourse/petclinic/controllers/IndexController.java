@@ -35,6 +35,7 @@ public class IndexController {
     @RequestMapping({" ", "/", "/index", "/index.html"})
     public String index() {
         Logger.getAnonymousLogger().info("in index");
+        System.out.println("Test");
         return "index";
     }
 }
