@@ -1,1 +1,1 @@
-web: java -jar pet-clinic-web/target/pet-clinic-web-0.06-SNAPSHOT.jar
+web: java -Dserver.port=$PORT -jar pet-clinic-web/target/pet-clinic-web-0.06-SNAPSHOT.jar
