@@ -28,14 +28,11 @@ package com.lmsolutions.springcourse.petclinic.controllers;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import java.util.logging.Logger;
-
 @Controller
 public class IndexController {
     @RequestMapping({" ", "/", "/index", "/index.html"})
     public String index() {
-        Logger.getAnonymousLogger().info("in index");
-        System.out.println("Test");
+
         return "index";
     }
 }
