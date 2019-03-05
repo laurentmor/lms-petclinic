@@ -29,14 +29,14 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
-@RequestMapping("/owners")
-public class OwnerController {
-    public OwnerController() {
+@RequestMapping("/vets")
+public class VetController {
+    public VetController() {
     }
 
     @RequestMapping({"", "/", "/index", "/index.html"})
     public String index() {
 
-        return "owner/index";
+        return "vet/index";
     }
 }

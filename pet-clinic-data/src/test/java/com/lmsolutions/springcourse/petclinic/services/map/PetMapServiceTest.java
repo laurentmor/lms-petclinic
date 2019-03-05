@@ -26,27 +26,32 @@
 package com.lmsolutions.springcourse.petclinic.services.map;
 
 import com.lmsolutions.springcourse.petclinic.models.Pet;
+import org.junit.Assert;
 import org.junit.Test;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.runner.RunWith;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.boot.test.mock.mockito.MockBean;
+import org.springframework.boot.test.context.SpringBootTestContextBootstrapper;
+import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
+import org.springframework.test.context.junit4.SpringRunner;
 
 import java.util.HashSet;
 import java.util.Set;
 
 @DisplayName("Spring boot 2 mockito2 Junit5 example")
 @ExtendWith(SpringExtension.class)
-//@ContextConfiguration(classes = { SpringTestConfiguration.class })
+@RunWith(SpringRunner.class)
+@ContextConfiguration(classes = {SpringBootTestContextBootstrapper.class})
 
 @SpringBootTest
 public class PetMapServiceTest {
     Set<Pet> pets;
-    @MockBean
-    private PetMapService petMapService;
+    //@CompositeValue.Component
+    PetMapService petMapService;
 
     @BeforeEach
     void setUp() {
@@ -72,8 +77,8 @@ public class PetMapServiceTest {
 
     @Test
     public void findAll() {
-        // when(petMapService.findAll()).thenReturn(pets);
-        //assertEquals(3, petMapService.findAll().size());
+//         Mockito.when(petMapService.findAll()).thenReturn(pets);
+        Assert.assertEquals(3, petMapService.findAll().size());
     }
 
     @Test
