@@ -8,5 +8,5 @@ jobs:
     steps:
       - checkout
       - restore_cache:
-          key: pet-clinic-{{checksum "pom.xml"}}
+          key: app-{{checksum "pom.xml"}}
       - run: echo "Test"
