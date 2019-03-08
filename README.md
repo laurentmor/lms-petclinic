@@ -5,3 +5,5 @@ My own version of Spring pet clinic
 
 [![Heroku App Status](http://heroku-shields.herokuapp.com/desolate-fortress-76870
 )](https://desolate-fortress-76870.herokuapp.com)
+
+[![CircleCI](https://circleci.com/gh/laurentmor/lms-petclinic.svg?style=svg)](https://circleci.com/gh/laurentmor/lms-petclinic)
