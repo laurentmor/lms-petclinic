@@ -3,6 +3,8 @@ jobs:
   build:
 
     working_directory: ~/app
+    docker:
+      - image: laurentmorissette/lms-chuck-norris-jokes:latest
     steps:
       - checkout
       - run: echo "Hello $$$$"
